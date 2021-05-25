@@ -645,9 +645,13 @@
             alert("Form not submitted");//Validation Message
             return false;
           }
-          else {
+           else {var frm = document.getElementsByName('contact-form')[0];
+            frm.submit(); // Submit the form
+            frm.reset();  // Reset all form data
+  
             submitted=true;
             alert("Submitted")
+            document.contact-form.reset();
             return true;
           }
         }
